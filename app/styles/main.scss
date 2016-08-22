@@ -1,0 +1,176 @@
+/*
+ * Base Stylesheet
+ */
+
+/* Color Variables */
+$brand-red: #F7323F;
+$brand-brown: #D9AC7F;
+$brand-grey: #F4F4F4;
+$brand-black: #333333;
+$brand-red-hover: #E61933;
+$brand-empty: #888888;
+$brand-fade: #EEEEEE;
+$brand-green: #C2CEA8;
+
+
+/* Font Variables */
+$roboto-stack: 'Roboto Mono', monospace;
+$karla-stack: 'Karla', sans-serif;
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 25px;
+  color: $brand-red;
+  font-family: $karla-stack!important;
+  font-weight: bold!important;
+}
+
+a {
+  color: $brand-red!important;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $roboto-stack;
+}
+
+/* Typography - Alignment */
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+
+/* Cards */
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background-color: white;
+
+  .card-content {
+    padding: 8px 15px;
+
+    h4 {
+      color: $brand-red;
+    }
+  }
+}
+
+.card.complete  {
+  background: $brand-fade;
+  border-bottom: 2px dashed $brand-red;
+  margin-top: 0px;
+  box-shadow: none;
+
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* IE */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Kitchen Messages */
+.message {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 8px;
+
+  p {
+    margin: 0!important;
+  }
+}
+
+.message.false {
+  background-color: $brand-green;
+}
+
+.message.true {
+  background-color: $brand-black;
+}
+
+
+/* Bootstrap Resets */
+.container {
+  margin: 0 auto;
+  width: 100%!important;
+}
+
+.navbar-default {
+  margin-bottom: 0px!important;
+}
+
+.full-width {
+  width: 100%!important;
+}
+
+.empty {
+  height: 100vh;
+  background: $brand-grey;
+  text-align: center;
+
+  h3 {
+    line-height: 90vh;
+    color: $brand-empty;
+  }
+}
+
+.btn {
+  border-radius: 0px!important;
+  text-transform: none!important;
+  font-family: $roboto-stack;
+}
+
+.btn.brand {
+  background: $brand-red!important;
+  color: white!important;
+  border-radius: 0px;
+}
+
+.btn.brand:hover {
+  background: $brand-red-hover!important;
+}
