@@ -1,4 +1,4 @@
-# ANDO Expedite
+# ANDO Expediter
 Helping kitchen staff expedite orders
 
 ## Project Build
